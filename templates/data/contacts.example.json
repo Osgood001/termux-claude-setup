@@ -1,0 +1,25 @@
+{
+  "contacts": [
+    {
+      "name": "Alice",
+      "relationship": "close friend",
+      "frequency": "weekly",
+      "lastContact": "2026-03-10",
+      "notes": "Likes hiking, works in tech"
+    },
+    {
+      "name": "Bob",
+      "relationship": "college friend",
+      "frequency": "biweekly",
+      "lastContact": "2026-02-28",
+      "notes": "Lives in another city"
+    },
+    {
+      "name": "Mom",
+      "relationship": "family",
+      "frequency": "weekly",
+      "lastContact": "2026-03-15",
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+# 示例 crontab 配置
+# ============================================================
+# 使用方法：crontab -e 然后粘贴以下内容（去掉注释修改路径）
+# 或者：crontab < crontab.example
+#
+# 提示：
+#   - 分钟不要全用 0 或 30，错开几分钟避免同时执行
+#   - TZ 设置你的时区
+#   - ~/scripts/ 路径按你的实际安装路径修改
+# ============================================================
+
+TZ=Asia/Shanghai
+
+# === 核心提醒 ===
+
+# 早间规划（每天 8:03）
+3 8 * * * ~/scripts/morning-coach.sh
+
+# 晚间复盘（每天 22:03）
+3 22 * * * ~/scripts/evening-review.sh
+
+# === 健康 ===
+
+# 呼吸练习提醒（睡前三轮）
+23 21 * * * ~/scripts/breathe-remind.sh
+47 22 * * * ~/scripts/breathe-remind.sh
+17 23 * * * ~/scripts/breathe-remind.sh
+
+# 电池 + 温度监控（每2小时）
+11 */2 * * * ~/scripts/battery-monitor.sh
+
+# 深夜亮屏检测（守护进程保活，每30分钟检查）
+*/30 * * * * ~/scripts/start-screen-monitor.sh >/dev/null 2>&1
+
+# === 信息获取（可选）===
+
+# 新闻/论文摘要（每天 9:33）
+# 33 9 * * * ~/scripts/news-digest.sh
+
+# === 数据追踪（可选）===
+
+# 社交关系提醒（每周三/六 20:03）
+# 3 20 * * 3,6 ~/scripts/social-reminder.sh
+
+# 自动日报（每天 23:33）
+# 33 23 * * * ~/scripts/daily-report.sh
+
+# === 监控（可选）===
+
+# API 健康检查（每30分钟）
+# */30 * * * * ~/scripts/api-health.sh

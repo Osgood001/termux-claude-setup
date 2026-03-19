@@ -1,0 +1,23 @@
+{
+  "lastUpdated": "2026-03-19",
+  "tasks": [
+    {
+      "id": "task-1",
+      "title": "Finish project report",
+      "deadline": "2026-03-25",
+      "priority": "high",
+      "status": "in_progress",
+      "progress": 40,
+      "nextAction": "Complete data analysis section"
+    },
+    {
+      "id": "task-2",
+      "title": "Prepare presentation slides",
+      "deadline": "2026-03-28",
+      "priority": "medium",
+      "status": "pending",
+      "progress": 0,
+      "nextAction": "Outline key points"
+    }
+  ]
+}
